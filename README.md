@@ -25,3 +25,4 @@ A skeleton for a flutter project with some packages included (and AndroidX ready
 
 - Firebase
   - Crashlytics
+  - Analytics
