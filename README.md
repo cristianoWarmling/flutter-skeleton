@@ -1,6 +1,10 @@
 # flutter_skeleton
 
-A skeleton for a flutter project with some packages included.
+A skeleton for a flutter project with some packages included (and AndroidX ready).
+
+## Get started
+
+- Put your `google-services.json` inside of `[app_folder]\android\app`
 
 ## Folder structure
 
@@ -16,3 +20,8 @@ A skeleton for a flutter project with some packages included.
   - Common utilitary functions, like number/date formatting, string encrypt/decrypt etc.
 - `widgets`
   - Common widgets of your application. A custom button, inputs etc.
+
+## Resources
+
+- Firebase
+  - Crashlytics
