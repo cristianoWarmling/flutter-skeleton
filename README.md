@@ -26,3 +26,8 @@ A skeleton for a flutter project with some packages included (and AndroidX ready
 - Firebase
   - Crashlytics
   - Analytics
+- _BLoC_ provider
+
+## TODO
+
+- Crashlytics iOS configuration

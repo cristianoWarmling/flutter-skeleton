@@ -1,9 +1,11 @@
 import 'dart:async';
 
+import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_skeleton/data/hello_world.bloc.dart';
 import 'package:flutter_skeleton/routes.dart';
 
 void main() {
@@ -17,16 +19,21 @@ void main() {
 
   runZoned<Future<void>>(() async {
     runApp(
-      MaterialApp(
-        title: 'Flutter Skeleton',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        routes: RoutesProvider.routes,
-        initialRoute: "/",
-        navigatorObservers: [
-          FirebaseAnalyticsObserver(analytics: analytics),
+      BlocProvider(
+        blocs: [
+          Bloc((i) => HelloWorldBloc()),
         ],
+        child: MaterialApp(
+          title: 'Flutter Skeleton',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          routes: RoutesProvider.routes,
+          initialRoute: "/",
+          navigatorObservers: [
+            FirebaseAnalyticsObserver(analytics: analytics),
+          ],
+        ),
       ),
     );
   }, onError: Crashlytics.instance.recordError);
