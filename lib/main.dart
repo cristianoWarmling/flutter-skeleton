@@ -7,6 +7,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_skeleton/data/hello_world.bloc.dart';
 import 'package:flutter_skeleton/routes.dart';
+import 'package:flutter_skeleton/services/hello_world.service.dart';
 
 void main() {
   // To enable in dev mode, uncomment the line bellow.
@@ -23,13 +24,16 @@ void main() {
         blocs: [
           Bloc((i) => HelloWorldBloc()),
         ],
+        dependencies: [
+          Dependency((i) => HelloWorldService()),
+        ],
         child: MaterialApp(
           title: 'Flutter Skeleton',
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
           routes: RoutesProvider.routes,
-          initialRoute: "/",
+          initialRoute: '/',
           navigatorObservers: [
             FirebaseAnalyticsObserver(analytics: analytics),
           ],

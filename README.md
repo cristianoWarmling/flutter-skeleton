@@ -12,6 +12,8 @@ A skeleton for a flutter project with some packages included (and AndroidX ready
   - Where will contains all of routes of your app and where all `screens` will be imported.
 - `data`
   - Put here your _BLoC_ files
+- `model`
+  - Where you will put all of your model classes
 - `screens`
   - The files of your screens. This files will be imported into `routes.dart`
 - `services`
@@ -27,6 +29,7 @@ A skeleton for a flutter project with some packages included (and AndroidX ready
   - Crashlytics
   - Analytics
 - _BLoC_ provider
+- Dio Http client
 
 ## TODO
 
