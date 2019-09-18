@@ -9,6 +9,7 @@ class RequestFloatButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamBuilder<bool>(
       stream: helloWorldBloc.outLoading,
+      initialData: false,
       builder: (context, snapshot) {
         return FloatingActionButton(
           onPressed: !snapshot.data
