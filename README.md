@@ -5,8 +5,12 @@ A skeleton for a flutter project with some packages included (and AndroidX ready
 ## Get started
 
 - Replace all **package names** (_flutter_skeleton_) on project to yours
-- Change the **applicationId** in `[app_folder]\android\app\build.gradle`
-- Put your `google-services.json` inside of `[app_folder]\android\app` with the same **applicationId** choosed (or just remove firebase dependencies from _pubspec.yaml_)
+- Android
+  - Change the **applicationId** in `[app_folder]\android\app\build.gradle`
+  - Put your `google-services.json` inside of `[app_folder]\android\app` with the same **applicationId** choosed
+- iOS
+  - Change the **Bundle identifier** at _General_ tab on **Runner** using the **XCode**
+  - Put your **GoogleService-Info.plist** inside of `[app_folder]\ios\Runner` with the same **Bundle Identifier** choosed,  using the **XCode**
 
 ## Folder structure
 
@@ -32,7 +36,3 @@ A skeleton for a flutter project with some packages included (and AndroidX ready
   - Analytics
 - _BLoC_ provider
 - Dio Http client
-
-## TODO
-
-- Crashlytics iOS configuration
