@@ -4,7 +4,9 @@ A skeleton for a flutter project with some packages included (and AndroidX ready
 
 ## Get started
 
-- Put your `google-services.json` inside of `[app_folder]\android\app`
+- Replace all **package names** (_flutter_skeleton_) on project to yours
+- Change the **applicationId** in `[app_folder]\android\app\build.gradle`
+- Put your `google-services.json` inside of `[app_folder]\android\app` with the same **applicationId** choosed (or just remove firebase dependencies from _pubspec.yaml_)
 
 ## Folder structure
 
