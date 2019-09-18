@@ -2,6 +2,7 @@ import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_skeleton/data/hello_world.bloc.dart';
 import 'package:flutter_skeleton/model/todo.model.dart';
+import 'package:flutter_skeleton/widgets/request_floatbuton.widget.dart';
 
 class HelloWorld extends StatelessWidget {
   HelloWorldBloc get helloWorldBloc => BlocProvider.getBloc<HelloWorldBloc>();
@@ -12,12 +13,7 @@ class HelloWorld extends StatelessWidget {
       appBar: new AppBar(
         title: new Text("Hello World"),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          helloWorldBloc.increment();
-        },
-        child: Icon(Icons.add),
-      ),
+      floatingActionButton: RequestFloatButton(),
       body: new Container(
         child: new Center(
           child: Column(
