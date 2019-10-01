@@ -34,5 +34,6 @@ A skeleton for a flutter project with some packages included (and AndroidX ready
 - Firebase
   - Crashlytics
   - Analytics
+  - Cloud Messaging (Check the `README.md` [here](https://pub.dev/packages/firebase_messaging/) to **iOS integration**)
 - _BLoC_ provider
 - Dio Http client

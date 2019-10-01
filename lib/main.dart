@@ -7,6 +7,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_skeleton/data/hello_world.bloc.dart';
 import 'package:flutter_skeleton/routes.dart';
+import 'package:flutter_skeleton/services/firebase_message.service.dart';
 import 'package:flutter_skeleton/services/hello_world.service.dart';
 
 void main() {
@@ -18,6 +19,9 @@ void main() {
   FirebaseAnalytics analytics = FirebaseAnalytics();
   FlutterError.onError = Crashlytics.instance.recordFlutterError;
 
+  final FirebaseMessageService firebaseMessageService =
+      FirebaseMessageService();
+
   runZoned<Future<void>>(() async {
     runApp(
       BlocProvider(
@@ -26,6 +30,7 @@ void main() {
         ],
         dependencies: [
           Dependency((i) => HelloWorldService()),
+          Dependency((i) => firebaseMessageService),
         ],
         child: MaterialApp(
           title: 'Flutter Skeleton',
@@ -41,4 +46,6 @@ void main() {
       ),
     );
   }, onError: Crashlytics.instance.recordError);
+
+  firebaseMessageService.init();
 }
